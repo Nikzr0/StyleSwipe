@@ -60,6 +60,7 @@ fun StyleSwipeAppMain() {
 
             composable("add") {
                 AddClothingScreen(
+                    viewModel = viewModel,  // <--- ВАЖНИЯТ РЕД
                     onNavigateBack = { navController.popBackStack() }
                 )
             }

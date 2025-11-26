@@ -27,6 +27,12 @@ class ClothingViewModel(private val repository: ClothingRepository) : ViewModel(
         }
     }
 
+    fun updateClothingItem(item: ClothingItem) {
+        viewModelScope.launch {
+            repository.update(item)
+        }
+    }
+
     fun deleteClothingItem(item: ClothingItem) {
         viewModelScope.launch {
             repository.delete(item.id)

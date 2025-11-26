@@ -9,8 +9,11 @@ data class ClothingItem(
     val id: Int = 0,
 
     val name: String,
+    val brand: String,
+    val size: String,
+    val price: String,
 
-    val imagePath: String,
+    val imagePaths: List<String>,
 
     val isLiked: Boolean = false
 )
